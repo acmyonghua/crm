@@ -1,57 +1,68 @@
-drop database CRM;
-create database CRM;
-use crm;
+DROP DATABASE IF EXISTS willi314_crm;
+CREATE DATABASE willi314_crm;
+USE willi314_crm;
 
-create table Cliente
-(
-	cliente_id int not null primary key auto_increment,
-	cliente_nome varchar(80) not null,
-	cliente_telefone varchar(20) not null,
-	cliente_email varchar(50) not null,
-	cliente_cpf varchar(11) not null,
-	cliente_status TINYINT(1) DEFAULT 1
-);
+CREATE TABLE cliente (
+    cliente_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cliente_razao_social VARCHAR(255) NOT NULL,
+    cliente_nome VARCHAR(80) NOT NULL,
+    cliente_telefone VARCHAR(20) NOT NULL,
+    cliente_email VARCHAR(50) NOT NULL,
+    cliente_cpf VARCHAR(14),
+    cliente_cnpj VARCHAR(18),
+    cliente_status TINYINT(1) DEFAULT 1
+) ENGINE=InnoDB;
 
-CREATE TABLE Empresa
-(
-	empresa_id int not null auto_increment primary key ,
-	empresa_nome varchar(200) not null,
-	empresa_telefone varchar(20),
-	empresa_email varchar(50),
-	empresa_status tinyint(1) default 1,
-	empresa_cnpj varchar(14)
-);
+CREATE TABLE empresa (
+    empresa_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    empresa_nome VARCHAR(200) NOT NULL,
+    empresa_telefone VARCHAR(20),
+    empresa_email VARCHAR(50),
+    empresa_status TINYINT(1) DEFAULT 1,
+    empresa_cnpj VARCHAR(14)
+) ENGINE=InnoDB;
 
-CREATE TABLE Usuario
-(
-	usuario_id int not null primary key auto_increment,
-	usuario_nome varchar(255) not null,
-	usuario_email varchar(75) not null,
-	usuario_cpf varchar(11) not null,
-	usuario_status TINYINT(1) DEFAULT 1,
-	usuario_empresa int not null,
-	constraint fk_empresa_usuario foreign key (usuario_empresa) references empresa(empresa_id)
-);
+CREATE TABLE usuario (
+    usuario_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    usuario_nome VARCHAR(255) NOT NULL,
+    usuario_email VARCHAR(255) NOT NULL,
+    usuario_senha VARCHAR(100) NOT NULL,
+    usuario_status TINYINT(1) DEFAULT 1,
+    usuario_empresa INT(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB;
 
-create table menu
-(
-	menu_id int not null primary key auto_increment,
-	url_menu varchar(500) not null,
-	icone_menu varchar(200) not null,
-	titulo_pagina varchar(80) not null
-);
+CREATE TABLE menu (
+    menu_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    menu_url VARCHAR(255),
+    menu_icone VARCHAR(50),
+    menu_titulo VARCHAR(255),
+    menu_superior INT(10) UNSIGNED
+) ENGINE=InnoDB;
 
-create table grupo
-(
-	grupo_id int not null primary key auto_increment,
-	grupo_nome varchar(100) not null
-);
+CREATE TABLE grupo (
+    grupo_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    grupo_nome VARCHAR(100) NOT NULL
+) ENGINE=InnoDB;
 
-create table menu_grupo
-(
-	id_menu_grupo int not null primary key auto_increment,
-	menu_grupo_menu int not null,
-	menu_grupo_grupo int not null,
-	constraint fk_menu_grupo_menu foreign key (menu_grupo_menu) references menu(menu_id),
-	constraint fk_menu_grupo_grupo foreign key(menu_grupo_grupo) references grupo(grupo_id)
-);
+CREATE TABLE menu_grupo (
+    menu_grupo_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    menu_grupo_menu INT(10) UNSIGNED NOT NULL,
+    menu_grupo_grupo INT(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE usuario_grupo (
+	usuario_grupo_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	usuario_grupo_usuario INT(10) UNSIGNED NOT NULL,
+	usuario_grupo_grupo INT(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB;
+
+ALTER TABLE usuario
+ADD CONSTRAINT fk_usuario_empresa FOREIGN KEY (usuario_empresa) REFERENCES empresa(empresa_id);
+
+ALTER TABLE menu_grupo
+ADD CONSTRAINT fk_menu_grupo_menu FOREIGN KEY (menu_grupo_menu) REFERENCES menu(menu_id),
+ADD CONSTRAINT fk_menu_grupo_grupo FOREIGN KEY(menu_grupo_grupo) REFERENCES grupo(grupo_id);
+
+ALTER TABLE usuario_grupo
+ADD CONSTRAINT fk_usuario_grupo_usuario FOREIGN KEY (usuario_grupo_usuario) REFERENCES usuario(usuario_id),
+ADD CONSTRAINT fk_usuario_grupo_grupo FOREIGN KEY(usuario_grupo_grupo) REFERENCES grupo(grupo_id);
