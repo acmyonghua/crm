@@ -5,12 +5,22 @@ USE willi314_crm;
 CREATE TABLE cliente (
     cliente_id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cliente_razao_social VARCHAR(255) NOT NULL,
-    cliente_nome VARCHAR(80) NOT NULL,
-    cliente_telefone VARCHAR(20) NOT NULL,
+    cliente_nome_fantasia VARCHAR(255) NOT NULL,
+    cliente_telefone_fixo VARCHAR(20) NOT NULL,
+    cliente_telefone_celular VARCHAR(20) NOT NULL,
+    cliente_telefone_comercial VARCHAR(20) NOT NULL,
     cliente_email VARCHAR(50) NOT NULL,
     cliente_cpf VARCHAR(14),
     cliente_cnpj VARCHAR(18),
-    cliente_status TINYINT(1) DEFAULT 1
+    cliente_endereco VARCHAR(255),
+    cliente_endereco_complemento VARCHAR(255),
+    cliente_endereco_numero VARCHAR(20),
+    cliente_bairro VARCHAR(255),
+    cliente_cidade INT(10) UNSIGNED,
+    cliente_uf INT(10) UNSIGNED,
+    cliente_cep VARCHAR(10),
+    cliente_status TINYINT(1) DEFAULT 1,
+    cliente_obs TEXT
 ) ENGINE=InnoDB;
 
 CREATE TABLE empresa (
