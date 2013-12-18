@@ -1,0 +1,7 @@
+/** 
+ * Estilos personalizados que irao sobrescrever
+ * os padrões do Twitter Bootstrap
+ */
+body {
+    padding-top: 70px;
+}
