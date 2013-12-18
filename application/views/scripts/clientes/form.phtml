@@ -1,0 +1,30 @@
+<fieldset>
+    <legend>Clientes</legend>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="cliente_razao_social" class="col-sm-2 control-label">Razão social</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="cliente_razao_social" name="cliente_razao_social" placeholder="Razão social">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cliente_nome_fantasia" class="col-sm-2 control-label">Nome fantasia</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="cliente_nome_fantasia" name="cliente_nome_fantasia" placeholder="Nome fantasia">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cliente_endereco" class="col-sm-2 control-label">Endereço</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="cliente_endereco" name="cliente_endereco" placeholder="Endereço">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success"><span class="glyphicon-regular glyphicon-ok_2"></span>&nbsp;&nbsp;&nbsp;Salvar</button>
+                <a href="<?php echo $this->url(array('action' => 'index')); ?>" class="btn btn-danger"><span class="glyphicon-regular glyphicon-ok_2"></span>&nbsp;&nbsp;&nbsp;Cancelar</a>
+            </div>
+        </div>
+    </form>
+</fieldset>
