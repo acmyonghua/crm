@@ -12,6 +12,48 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Clientes">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="form"/>
+          <actionMethod actionName="save"/>
+          <actionMethod actionName="view"/>
+          <actionMethod actionName="drop"/>
+        </controllerFile>
+        <controllerFile controllerName="Relatorios">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="form"/>
+          <actionMethod actionName="save"/>
+          <actionMethod actionName="view"/>
+          <actionMethod actionName="drop"/>
+        </controllerFile>
+        <controllerFile controllerName="Usuarios">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="form"/>
+          <actionMethod actionName="save"/>
+          <actionMethod actionName="view"/>
+          <actionMethod actionName="drop"/>
+        </controllerFile>
+        <controllerFile controllerName="Grupos">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="form"/>
+          <actionMethod actionName="save"/>
+          <actionMethod actionName="view"/>
+          <actionMethod actionName="drop"/>
+        </controllerFile>
+        <controllerFile controllerName="Menus">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="form"/>
+          <actionMethod actionName="save"/>
+          <actionMethod actionName="view"/>
+          <actionMethod actionName="drop"/>
+        </controllerFile>
+        <controllerFile controllerName="Atendimentos">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="form"/>
+          <actionMethod actionName="save"/>
+          <actionMethod actionName="view"/>
+          <actionMethod actionName="drop"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory>
@@ -28,6 +70,96 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Relatorios">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuarios">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Grupos">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Menus">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="form"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Grupos">
+            <viewScriptFile forActionName="form"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Menus">
+            <viewScriptFile forActionName="form"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Relatorios">
+            <viewScriptFile forActionName="form"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuarios">
+            <viewScriptFile forActionName="form"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="save"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Grupos">
+            <viewScriptFile forActionName="save"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Menus">
+            <viewScriptFile forActionName="save"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Relatorios">
+            <viewScriptFile forActionName="save"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuarios">
+            <viewScriptFile forActionName="save"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Grupos">
+            <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Menus">
+            <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Relatorios">
+            <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuarios">
+            <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="drop"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Grupos">
+            <viewScriptFile forActionName="drop"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Menus">
+            <viewScriptFile forActionName="drop"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Relatorios">
+            <viewScriptFile forActionName="drop"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Usuarios">
+            <viewScriptFile forActionName="drop"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Atendimentos">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Atendimentos">
+            <viewScriptFile forActionName="form"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Atendimentos">
+            <viewScriptFile forActionName="save"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Atendimentos">
+            <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Atendimentos">
+            <viewScriptFile forActionName="drop"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
