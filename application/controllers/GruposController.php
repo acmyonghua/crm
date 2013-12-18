@@ -1,38 +1,34 @@
 <?php
 
-class GruposController extends Zend_Controller_Action
-{
+class GruposController extends Zend_Controller_Action {
 
-    public function init()
-    {
-        /* Initialize action controller here */
-    }
+    public function init() {}
 
-    public function indexAction()
-    {
-        // action body
-    }
+    /** 
+     * Ação índice da controladora. Faz a listagem dos registros de acordo com
+     * os filtros passados para a consulta SQL executada pelo Zend_Paginator
+     */
+    public function indexAction() {}
 
-    public function formAction()
-    {
-        // action body
-    }
+    /** 
+     * Formulário de criação e edição de grupo
+     */
+    public function formAction() {}
 
-    public function saveAction()
-    {
-        // action body
-    }
+    /** 
+     * Cria ou atualiza um novo grupo no banco de dados
+     */
+    public function saveAction() {}
 
-    public function viewAction()
-    {
-        // action body
-    }
+    /** 
+     * Visualiza um determinado grupo cadastrado
+     */
+    public function viewAction() {}
 
-    public function dropAction()
-    {
-        // action body
-    }
-
+    /** 
+     * Remove um determinado grupo no banco de dados
+     */
+    public function dropAction() {}
 
 }
 
