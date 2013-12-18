@@ -8,22 +8,92 @@
                 <input type="text" class="form-control" id="cliente_razao_social" name="cliente_razao_social" placeholder="Razão social">
             </div>
         </div>
+        
         <div class="form-group">
             <label for="cliente_nome_fantasia" class="col-sm-2 control-label">Nome fantasia</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="cliente_nome_fantasia" name="cliente_nome_fantasia" placeholder="Nome fantasia">
             </div>
         </div>
+        
         <div class="form-group">
-            <label for="cliente_endereco" class="col-sm-2 control-label">Endereço</label>
+            <label for="cliente_email" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="cliente_endereco" name="cliente_endereco" placeholder="Endereço">
+                <input type="email" class="form-control" id="cliente_email" name="cliente_email" placeholder="Email">
             </div>
         </div>
+        
+        <div class="form-group">
+            <label for="cliente_cnpj" class="col-sm-2 control-label">Documento</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="cliente_cnpj" name="cliente_cnpj" placeholder="CNPJ">
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="cliente_cpf" name="cliente_cpf" placeholder="CPF">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cliente_telefone_fixo" class="col-sm-2 control-label">Telefones</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="cliente_telefone_fixo" name="cliente_telefone_fixo" placeholder="Fixo">
+            </div>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="cliente_telefone_celular" name="cliente_telefone_celular" placeholder="Celular">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="cliente_telefone_comercial" name="cliente_telefone_comercial" placeholder="Comercial">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cliente_endereco" class="col-sm-2 control-label">Endereço</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="cliente_endereco" name="cliente_endereco" placeholder="Rua">
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control" id="cliente_endereco_numero" name="cliente_endereco_numero" placeholder="Número">
+            </div>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="cliente_endereco_complemento" name="cliente_endereco_complemento" placeholder="Complemento">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cliente_endereco" class="col-sm-2 control-label">&nbsp;</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="cliente_endereco" name="cliente_endereco" placeholder="CEP">
+            </div>
+            <div class="col-sm-2">
+                <select class="form-control">
+                    <option>Selecione o estado</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control">
+                    <option>Selecione a cidade</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control">
+                    <option>Selecione o bairro</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="cliente_obs" class="col-sm-2 control-label">Observações</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="cliente_obs" name="cliente_obs" rows="5"></textarea>
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-success"><span class="glyphicon-regular glyphicon-ok_2"></span>&nbsp;&nbsp;&nbsp;Salvar</button>
-                <a href="<?php echo $this->url(array('action' => 'index')); ?>" class="btn btn-danger"><span class="glyphicon-regular glyphicon-ok_2"></span>&nbsp;&nbsp;&nbsp;Cancelar</a>
+                <a href="<?php echo $this->url(array('controller' => 'clientes', 'action' => 'index'), 'lista'); ?>" class="btn btn-danger">
+                    <span class="glyphicon-halflings glyphicon-remove"></span>&nbsp;&nbsp;&nbsp;Cancelar
+                </a>
             </div>
         </div>
     </form>
