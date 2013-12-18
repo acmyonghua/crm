@@ -8,7 +8,8 @@ create table Cliente
 	cliente_nome varchar(80) not null,
 	cliente_telefone varchar(20) not null,
 	cliente_email varchar(50) not null,
-	cliente_cpf varchar(11) not null
+	cliente_cpf varchar(11) not null,
+	cliente_status TINYINT(1) DEFAULT 1
 );
 
 CREATE TABLE Empresa
@@ -17,7 +18,7 @@ CREATE TABLE Empresa
 	empresa_nome varchar(200) not null,
 	empresa_telefone varchar(20),
 	empresa_email varchar(50),
-	empresa_status tinyint(1) not null,
+	empresa_status tinyint(1) default 1,
 	empresa_cnpj varchar(14)
 );
 
@@ -27,6 +28,7 @@ CREATE TABLE Usuario
 	usuario_nome varchar(255) not null,
 	usuario_email varchar(75) not null,
 	usuario_cpf varchar(11) not null,
+	usuario_status TINYINT(1) DEFAULT 1,
 	usuario_empresa int not null,
 	constraint fk_empresa_usuario foreign key (usuario_empresa) references empresa(empresa_id)
 );
