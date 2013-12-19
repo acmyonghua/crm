@@ -61,7 +61,24 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Cliente"/>
+          <dbTableFile dbTableName="Empresa"/>
+          <dbTableFile dbTableName="Grupo"/>
+          <dbTableFile dbTableName="Menu"/>
+          <dbTableFile dbTableName="MenuGrupo"/>
+          <dbTableFile dbTableName="Usuario"/>
+          <dbTableFile dbTableName="UsuarioGrupo"/>
+        </dbTableDirectory>
+        <modelFile modelName="Cliente"/>
+        <modelFile modelName="Empresa"/>
+        <modelFile modelName="Grupo"/>
+        <modelFile modelName="Menu"/>
+        <modelFile modelName="MenuGrupo"/>
+        <modelFile modelName="Usuario"/>
+        <modelFile modelName="UsuarioGrupo"/>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
