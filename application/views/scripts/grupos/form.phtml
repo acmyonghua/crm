@@ -1,4 +1,20 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Grupos</b> and script/action name <b>form</b></p>
-</div>
+<fieldset>
+    <legend>Grupos</legend>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="grupos_nome" class="col-sm-2 control-label">Grupo</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="grupos_nome" name="grupos_nome" placeholder="Digite o nome do grupo">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success"><span class="glyphicon-regular glyphicon-ok_2"></span>&nbsp;&nbsp;&nbsp;Salvar</button>
+                <a href="" class="btn btn-danger">
+                    <span class="glyphicon-halflings glyphicon-remove"></span>&nbsp;&nbsp;&nbsp;Cancelar
+                </a>
+            </div>
+        </div>
+    </form>
+</fieldset>
